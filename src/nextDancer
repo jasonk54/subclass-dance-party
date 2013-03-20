@@ -1,0 +1,13 @@
+var MakeNextDancer = function(top, left, timeBetweenSteps) {
+	MakeDancer.call(this, top, left, timeBetweenSteps);
+};
+MakeNextDancer.prototype = Object.create(MakeDancer.prototype);
+
+MakeNextDancer.prototype.step = function() {
+	MakeDancer.prototype.step.call(this);
+	this.$node.animate({backgroundColor : "black", color: "red"},400);
+}
+
+var makeNextDancer = function (top, left, timeBetweenSteps) {
+	return new MakeNextDancer(top, left, timeBetweenSteps);
+};

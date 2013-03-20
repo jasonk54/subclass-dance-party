@@ -26,10 +26,27 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
-.dancer.nathan{
-  background-image: url('https://secure.gravatar.com/avatar/0525e0135918199dec84bc3abfe42669?s=400&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png');
-  width: 200px;
-  height: 250px;
-  border:5px solid blue;
+.laser{
+  background-image: url('http://nokian.typepad.com/photos/uncategorized/2007/08/26/blueflashy240x320ex3.gif');
+  width: 10px;
+  height: 2000px;
+  border: none;
   position:absolute;
+}
+
+.monkey{
+  background-image: url('http://gif-animation.leovacity.be/images/jumping-monkey-gif-animation.gif');
+  width: 200px;
+  height: 200px;
+  position:absolute;
+  border: none;
+}
+
+.dancefloor{
+  border: 6px solid;
+  height: 93%;
+  width: 100%;
+  background-color: black;
+  margin: auto;
+  margin-top: 2%;
 }
