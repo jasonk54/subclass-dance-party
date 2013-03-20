@@ -1,52 +1,50 @@
-body, html{
+body, html {
   height:100%;
 }
-body{
+
+body {
   margin: 0px;
   background-color:#444;
   font-size: 18px;
 }
-body, a:link, a:visited, a:active{
+
+body, a:link, a:visited, a:active {
   color: lightblue;
 }
-.topbar span{
+
+.topbar span {
   padding:5px 12px;
   float:right;
 }
-.topbar{
+
+.topbar {
   height:32px;
   background-color: #555;
 }
-.title{
+
+.title {
   background-color: #777;
 }
-.dancer{
+
+.dancer {
   border:10px solid red;
   border-radius:10px;
   position:absolute;
 }
 
-.laser{
+.laser {
   background-image: url('http://nokian.typepad.com/photos/uncategorized/2007/08/26/blueflashy240x320ex3.gif');
-  width: 10px;
-  height: 2000px;
+  width: 5px;
+  height: 500px;
   border: none;
   position:absolute;
+  border-radius: 50%;
 }
 
-.monkey{
+.monkey {
   background-image: url('http://gif-animation.leovacity.be/images/jumping-monkey-gif-animation.gif');
   width: 200px;
   height: 200px;
   position:absolute;
   border: none;
-}
-
-.dancefloor{
-  border: 6px solid;
-  height: 93%;
-  width: 100%;
-  background-color: black;
-  margin: auto;
-  margin-top: 2%;
 }

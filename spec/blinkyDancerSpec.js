@@ -3,13 +3,11 @@ describe("blinkyDancer", function() {
   var timeBetweenSteps = 100;
 
   beforeEach(function() {
-    // sets up a way to delay this test -- used below
     jasmine.Clock.useMock();
-
     blinkyDancer = new MakeBlinkyDancer(10, 20, timeBetweenSteps);
   });
 
-  it("should have a jQuery $node object", function(){
+  it("should have a jQuery $node object", function() {
     expect(blinkyDancer.$node).toEqual(jasmine.any(jQuery));
   });
 
@@ -19,14 +17,11 @@ describe("blinkyDancer", function() {
     expect(blinkyDancer.$node.toggle).toHaveBeenCalled();
   });
 
-  describe("dance", function(){
-
-    it("should call step periodically", function(){
+  describe("dance", function() {
+    it("should call step periodically", function() {
       spyOn(blinkyDancer, "step").andCallThrough();
-      // for crazy reasons, we need to let some time pass
-      // specifically, the spied-upon step function will not be called the first time around
-      jasmine.Clock.tick(timeBetweenSteps);
 
+      jasmine.Clock.tick(timeBetweenSteps);
       expect(blinkyDancer.step.callCount).toBe(1);
 
       jasmine.Clock.tick(timeBetweenSteps);
@@ -35,6 +30,5 @@ describe("blinkyDancer", function() {
       jasmine.Clock.tick(timeBetweenSteps);
       expect(blinkyDancer.step.callCount).toBe(2);
     });
-
   });
 });

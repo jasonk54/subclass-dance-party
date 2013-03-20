@@ -6,40 +6,35 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
-    <script src="src/makeLaser.js"></script>
-    <script src="src/nextDancer.js"></script>
+    <script src="src/laser.js"></script>
+    <script src="src/monkeyDancer.js"></script>
   </head>
   <body>
-
     <div class="topbar">
       <span class="title">object dance party</span>
-      <span class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">
-        <a href="#">add a dancer</a>
+      <span class="addDancerButton" data-dancer-maker-function-name="blinkyDancer">
+        <a href="#">Add a Dancing Dot!</a>
       </span>
-      <span class="addDancerButton" data-dancer-maker-function-name="makeLaser">
-        <a href="#">Laser Show</a>
+      <span class="addDancerButton" data-dancer-maker-function-name="laser">
+        <a href="#">Laser Show!</a>
       </span>
-      <span class="addDancerButton" data-dancer-maker-function-name="makeNextDancer">
-        <a href="#">Add Monkey!!</a>
+      <span class="addDancerButton" data-dancer-maker-function-name="monkeyDancer">
+        <a href="#">Add a Monkey!!</a>
       </span>
     </div>
-    <div class="dancefloor"></div>
-
     <script>
-      $(document).ready(function(){
+      $(document).ready(function() {
         window.dancers = [];
 
-        $(".addDancerButton").on("click", function(event){
+        $(".addDancerButton").on("click", function(event) {
           var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
-          // get the maker function for the kind of dancer we're supposed to make
           var dancerMakerFunction = window[dancerMakerFunctionName];
-          // make a dancer with a random position
           var dancer = dancerMakerFunction(
             $("body").height() * Math.random(),
             $("body").width() * Math.random(),
             Math.random() * 5000
           );
-          $('.dancefloor').append(dancer.$node);
+          $('body').append(dancer.$node);
         });
       });
     </script>
